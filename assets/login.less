@@ -1,0 +1,101 @@
+@min1440:  ~"(min-width: 1440px)";
+@min1024:  ~"(min-width: 1024px)";
+@jumbo:  ~"(min-width: 768px)";
+@midi:  ~"(max-width: 767px)";
+@min768max992: ~"(min-width: 768px) and (max-width: 992px)";
+@min993max1200: ~"(min-width: 993px) and (max-width: 1200px)";
+
+@main_color : #3CA2E0;
+@white_color : #fff;
+@white_gray1 : #EAEAEA;
+@white_blue1 : #79CCFC;
+
+body {
+	background: @main_color;
+}
+
+.margin-top-10 {margin-top: 10px;}
+.margin-top-20 {margin-top: 20px;}
+
+.border-radius(@radius: 0.3em)
+{
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.logo-login
+{
+	margin-top: 100px;
+	@media @midi {
+		margin-top: 20px;
+	}
+}
+
+.img-profile
+{
+	.border-radius(50%);
+	width: 70px;
+	height: 70px;
+}
+
+.logo-content-text
+{
+	color: @white_color;
+	text-align: center;
+}
+
+.input-line
+{
+	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none;
+    border-image: none;
+    border-radius: 0;
+    border-style: none none solid;
+    border-width: medium medium 2px;
+    box-shadow: none;
+    border-bottom: 2px solid @white_blue1;
+    color: @white_color;
+    &:focus{
+    	-moz-border-bottom-colors: none;
+	    -moz-border-left-colors: none;
+	    -moz-border-right-colors: none;
+	    -moz-border-top-colors: none;
+	    background: none;
+	    border-image: none;
+	    border-radius: 0;
+	    border-style: none none solid;
+	    border-width: medium medium 2px;
+	    box-shadow: none;
+	    border-bottom: 2px solid @white_color;
+	    color: @white_color;
+    }
+}
+
+
+input[type="email"]::-webkit-input-placeholder, 
+input[type="text"]::-webkit-input-placeholder, 
+input[type="password"]::-webkit-input-placeholder {
+    color: @white_color;
+}
+
+input[type="email"]:-moz-placeholder, 
+input[type="text"]:-moz-placeholder, 
+input[type="password"]:-moz-placeholder {
+    color: @white_color;
+}
+
+input[type="email"]::-moz-placeholder, 
+input[type="text"]::-moz-placeholder, 
+input[type="password"]::-moz-placeholder {
+    color: @white_color;
+}
+
+input[type="email"]:-ms-input-placeholder, 
+input[type="text"]:-ms-input-placeholder, 
+input[type="password"]:-ms-input-placeholder {
+    color: @white_color;
+}
