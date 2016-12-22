@@ -9,13 +9,47 @@
 @white_color : #fff;
 @gray1_color : #EAEAEA;
 @blue1_color : #79CCFC;
+@orange1_color : #f19330;
 
 body 
 {
-	padding-top: 70px;
+	padding-top: 50px;
+}
+
+.border-radius(@radius: 0.3em)
+{
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
 }
 
 .mbc{
 	background: @main_color;
 	color: @white_color;
+}
+
+.mycover
+{
+	background: @main_color;
+	min-height: 100px;
+	height: auto;
+	padding-bottom: 50px;
+	@media @midi {
+		height: auto;
+	}
+}
+
+.cover-img-profile
+{
+	.border-radius(50%);
+	width:150px;
+	height:150px;
+	margin-top: 20px;
+	border: 10px solid @blue1_color;
+}
+
+.profile-name, .profile-about
+{
+	color: @white_color;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
 }
