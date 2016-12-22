@@ -76,13 +76,60 @@
     	</div>
     </section>
 
-    <article class="container">
+    <article class="container margin-top-20">
+        <div class="row">
+            <div class="col-md-9 col-sm-12 col-xs-12 pull-right"> 
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                      <textarea class="post-status-control" placeholder="Apa yang anda fikirkan" ></textarea>
+                  </div>
+                  <div class="panel-footer">
+                        <button class="btn btn-primary">Post</button>
+                  </div>
+                </div>
+            </div>
 
+            <div class="col-md-3 col-sm-12 col-xs-12"> 
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    Cras justo odio
+                  </a>
+                  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                  <a href="#" class="list-group-item">Morbi leo risus</a>
+                  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                  <a href="#" class="list-group-item">Vestibulum at eros</a>
+                </div>
+
+                <div class="panel panel-primary margin-top-10">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                  </div>
+                  <div class="panel-body">
+                    Panel content
+                  </div>
+                </div>
+            </div>
+        </div>
     </article> <!-- /container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="assets/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      var textarea = document.querySelector('textarea.post-status-control');
+
+      textarea.addEventListener('keydown', autosize);
+                   
+      function autosize(){
+        var el = this;
+        setTimeout(function(){
+          el.style.cssText = 'height:auto; padding:0';
+          // for box-sizing other than "content-box" use:
+          // el.style.cssText = '-moz-box-sizing:content-box';
+          el.style.cssText = 'height:' + el.scrollHeight + 'px';
+        },0);
+      }
+    </script>
   </body>
 </html>
