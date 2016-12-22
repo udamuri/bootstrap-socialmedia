@@ -10,6 +10,7 @@
 @gray1_color : #EAEAEA;
 @gray2_color : #F1F1F1;
 @blue1_color : #79CCFC;
+@primary_color : #428bca;
 @orange1_color : #f19330;
 
 body 
@@ -51,10 +52,44 @@ body
 	border: 10px solid @blue1_color;
 }
 
+.img-profile-post
+{
+	.border-radius(50%);
+	width:60px;
+	height:60px;
+	border: 1px solid @blue1_color;
+}
+
+.col-xs-1-calc
+{
+	width: 65px;
+	height: auto;
+	float: left;
+}
+
+.col-xs-11-calc
+{
+	width: calc(100% - 69px);
+	height: auto;
+	float: left;
+}
+
+.post-name, .post-date
+{
+	color: @primary_color;
+}
+.post-date{font-size: 9pt;}
+
 .profile-name, .profile-about
 {
 	color: @white_color;
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+.post-content-data img
+{
+	width: 100%;
+	height: auto;
 }
 
 .post-status-control
@@ -65,4 +100,5 @@ body
 	max-width: 100%;
 	min-width: 100%;
 	min-height: 50px;
+	outline: none;
 }
