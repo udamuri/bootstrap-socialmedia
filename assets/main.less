@@ -13,6 +13,12 @@
 @primary_color : #428bca;
 @orange1_color : #f19330;
 
+@gray-darker:  lighten(#000, 13.5%); // #222
+@gray-dark:    lighten(#000, 20%);   // #333
+@gray:         lighten(#000, 33.5%); // #555
+@gray-light:   lighten(#000, 46.7%); // #777
+@gray-lighter: lighten(#000, 93.5%); // #eee
+
 body 
 {
 	padding-top: 50px;
@@ -74,11 +80,13 @@ body
 	float: left;
 }
 
-.post-name, .post-date
+.post-name
 {
 	color: @primary_color;
+	padding: 0;
+	margin:0;
 }
-.post-date{font-size: 9pt;}
+.post-date{font-size: 9pt;color: @gray;}
 
 .profile-name, .profile-about
 {
